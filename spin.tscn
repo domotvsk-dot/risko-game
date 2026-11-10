@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dexkab7njwdq7"]
+
+[ext_resource type="PackedScene" uid="uid://bpry7mm07ojyt" path="res://riso.glb" id="1_bgo38"]
+[ext_resource type="Script" uid="uid://duvdxnaweewy6" path="res://mesh_instance_3d.gd" id="2_s2fde"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s2fde"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j1gch"]
+size = Vector3(0.87597656, 0.71655273, 0.88861084)
+
+[node name="Node3D" type="Node3D" unique_id=1887115663]
+
+[node name="riso" parent="." unique_id=515069450 instance=ExtResource("1_bgo38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51123476, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="riso" unique_id=949517809]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8355421, 0.021126747, 0.07191688)
+mesh = SubResource("BoxMesh_s2fde")
+script = ExtResource("2_s2fde")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="riso/MeshInstance3D" unique_id=577635946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2157445, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="riso/MeshInstance3D/StaticBody3D" unique_id=1214795957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2620772, 0.14172363, -0.05569458)
+shape = SubResource("BoxShape3D_j1gch")

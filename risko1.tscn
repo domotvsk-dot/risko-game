@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://l0t210pyr0r3"]
+
+[ext_resource type="PackedScene" uid="uid://c6aulkkeabimf" path="res://risko.tscn" id="1_rfe3a"]
+[ext_resource type="Script" uid="uid://dbaj3etnvbgbw" path="res://risko1.gd" id="2_vef54"]
+[ext_resource type="AudioStream" uid="uid://by0waibugjx13" path="res://Geometry Dash - Practice Mode - Stay Inside Me - Soundtrack - MOBILE GAM3R.mp3" id="3_vef54"]
+[ext_resource type="AudioStream" uid="uid://2e3na7ab0d40" path="res://Cat meow sound effect - RazendeGijs(1).mp3" id="4_ntic1"]
+[ext_resource type="Script" uid="uid://c82cam7dadffc" path="res://cat_meow.gd" id="4_um4yx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j1gch"]
+
+[node name="Node3D" type="Node3D" unique_id=1100947318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59424216, 0.6883061, -0.06251803)
+
+[node name="Node3D" parent="." unique_id=1915061132 instance=ExtResource("1_rfe3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12023634, 0)
+script = ExtResource("2_vef54")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Node3D" unique_id=766672800]
+stream = ExtResource("3_vef54")
+unit_size = 7.0
+autoplay = true
+max_distance = 20.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D" unique_id=1794180640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12023634, 0)
+script = ExtResource("4_um4yx")
+
+[node name="MeowSound" type="AudioStreamPlayer3D" parent="Node3D/StaticBody3D" unique_id=481633214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12023634, 0)
+stream = ExtResource("4_ntic1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D" unique_id=935418128]
+shape = SubResource("BoxShape3D_j1gch")

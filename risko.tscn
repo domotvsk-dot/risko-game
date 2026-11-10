@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c6aulkkeabimf"]
+
+[ext_resource type="PackedScene" uid="uid://bpry7mm07ojyt" path="res://riso.glb" id="1_t4nqt"]
+[ext_resource type="Script" uid="uid://c68wqnllt0dbf" path="res://riso.gd" id="2_6ccy2"]
+
+[node name="Node3D" type="Node3D" unique_id=1915061132]
+
+[node name="riso" parent="." unique_id=515069450 instance=ExtResource("1_t4nqt")]
+script = ExtResource("2_6ccy2")
