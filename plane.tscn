@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://l0t210pyr0r3" path="res://risko1.tscn" id="10_ye4pl"]
 [ext_resource type="PackedScene" uid="uid://bha0fv37theex" path="res://t-90.tscn" id="11_a6rsd"]
 [ext_resource type="PackedScene" uid="uid://c4pbxgnygx2t2" path="res://risko.glb" id="11_b6rx2"]
+[ext_resource type="PackedScene" uid="uid://b0w3e86uuacvr" path="res://risko_sleeping/risko_sleeping.tscn" id="12_b6rx2"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_q50dc"]
 size = Vector2(1000, 1000)
@@ -120,7 +121,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.113370895, 0, 0.033410072)
 shape = SubResource("BoxShape3D_q50dc")
 
 [node name="Player" parent="." unique_id=1687004869 instance=ExtResource("1_dpar4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008246422, 1.235158, -0.0056990385)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.412861, 1.235158, -4.630934)
 script = ExtResource("2_nqs3l")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1616160125]
@@ -129,7 +130,6 @@ light_color = Color(1, 0.84313726, 0.69803923, 1)
 light_energy = 0.9
 light_bake_mode = 1
 shadow_enabled = true
-shadow_bias = 0.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1136750545]
 environment = SubResource("Environment_j1gch")
@@ -145,3 +145,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7078688, -9.158416)
 
 [node name="Node3D2" parent="." unique_id=1100947318 instance=ExtResource("10_ye4pl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.245904, 2.560481, -15.489135)
+
+[node name="risko_sleeping" parent="." unique_id=368261791 instance=ExtResource("12_b6rx2")]
+transform = Transform3D(0.8727626, 0, -0.48814487, 0, 1, 0, 0.48814487, 0, 0.8727626, 8.725727, 0.6408378, -6.7048426)

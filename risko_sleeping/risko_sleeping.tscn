@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b0w3e86uuacvr"]
+
+[ext_resource type="PackedScene" uid="uid://c0psff0atf7yb" path="res://risko_sleeping/risko_sleeping.glb" id="1_lw4gl"]
+[ext_resource type="Script" uid="uid://d0apg7ib5jqfs" path="res://risko_sleeping/risko_sleeping.gd" id="2_il82w"]
+[ext_resource type="Script" uid="uid://cinv5okw2q62x" path="res://risko_sleeping/risko_sleeping_zzz.gd" id="3_il82w"]
+
+[node name="risko_sleeping" type="Node3D" unique_id=368261791]
+
+[node name="risko" parent="." unique_id=1504186817 instance=ExtResource("1_lw4gl")]
+script = ExtResource("2_il82w")
+
+[node name="Zzz" type="Marker3D" parent="risko" unique_id=165554185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17100644, 0.26012665, 0.016712576)
+script = ExtResource("3_il82w")
+
+[editable path="risko"]

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://2h4y7t0836mj"]
+
+[ext_resource type="Texture2D" uid="uid://b7mme0lrkquy3" path="res://risko_sleeping/risko_sleeping_13b0d74603478184cf1a1d0c58200e17.jpg" id="1_luo6e"]
+[ext_resource type="Texture2D" uid="uid://c7071s2krajee" path="res://risko_sleeping/risko_sleeping_f103c10af3216564f180cea4ce46d23f.jpg" id="2_up8wp"]
+[ext_resource type="Texture2D" uid="uid://ehhk4xbumk5x" path="res://risko_sleeping/risko_sleeping_7ac29f2282052c2d54ea61e5d2ecbfb0.jpg" id="3_wrkhp"]
+
+[resource]
+resource_name = "Material_0"
+albedo_texture = ExtResource("1_luo6e")
+metallic_specular = 0.2
+normal_enabled = true
+normal_texture = ExtResource("3_wrkhp")
+ao_enabled = true
+ao_texture = ExtResource("2_up8wp")
+metadata/_gltf_primary_texture_coord = 0

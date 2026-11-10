@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bc885ii3wv4t5"]
+
+[ext_resource type="PackedScene" uid="uid://b0w3e86uuacvr" path="res://risko_sleeping/risko_sleeping.tscn" id="1_uu7n0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_il82w"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_6jxfh"]
+sky_material = SubResource("ProceduralSkyMaterial_il82w")
+
+[sub_resource type="Environment" id="Environment_47o61"]
+background_mode = 2
+sky = SubResource("Sky_6jxfh")
+glow_enabled = true
+
+[node name="risko_sleeping" type="Node3D" unique_id=2003245059]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1607058010]
+environment = SubResource("Environment_47o61")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=130763841]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=100283762]
+transform = Transform3D(0.979407, -0.06807267, 0.19007392, 0, 0.9414449, 0.33716702, -0.20189597, -0.33022377, 0.9220577, 0.12747236, 0.4812142, 0.6997271)
+
+[node name="risko_sleeping" parent="." unique_id=368261791 instance=ExtResource("1_uu7n0")]
